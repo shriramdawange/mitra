@@ -154,6 +154,28 @@ export default async function HomePage() {
             <StatCard href="#reminders" label="Pending Reminders" value={`${pendingReminders}`} tone="bg-amber-400" />
             <StatCard href="#learning" label="Learning In Progress" value={`${learningInProgress}`} tone="bg-rose-400" />
           </div>
+          <details className="mt-4">
+            <summary className="cursor-pointer text-sm font-medium text-slate-600 hover:text-slate-800">
+              Menu
+            </summary>
+            <nav className="mt-2 space-y-1">
+              <a href="#goals" className="text-slate-600 hover:text-slate-800 transition-colors">
+                Goals
+              </a>
+              <a href="#habits" className="text-slate-600 hover:text-slate-800 transition-colors">
+                Habits
+              </a>
+              <a href="#planner" className="text-slate-600 hover:text-slate-800 transition-colors">
+                Planner
+              </a>
+              <a href="#reminders" className="text-slate-600 hover:text-slate-800 transition-colors">
+                Reminders
+              </a>
+              <a href="#learning" className="text-slate-600 hover:text-slate-800 transition-colors">
+                Learning
+              </a>
+            </nav>
+          </details>
         </header>
 
         {/* Daily execution */}
@@ -316,7 +338,11 @@ export default async function HomePage() {
 
         {/* Plan */}
         <div className="grid gap-6 xl:grid-cols-3">
-          <SectionCard title="Calendar" subtitle="Plan events and review your month at a glance." className="xl:col-span-2">
+          <SectionCard
+            id="planner"
+            title="Calendar"
+            subtitle="Plan events and review your month at a glance."
+          >
             <form action={addCalendarEvent} className="grid gap-3 md:grid-cols-2">
               <div className="md:col-span-2">
                 <label htmlFor="event-title" className={labelClass}>
@@ -439,7 +465,11 @@ export default async function HomePage() {
         </div>
 
         {/* Reminders */}
-        <SectionCard title="Reminders" subtitle="Schedule and close personal reminders.">
+        <SectionCard
+            id="reminders"
+            title="Reminders"
+            subtitle="Schedule and close personal reminders."
+          >
           <form action={addReminder} className="grid gap-3 md:grid-cols-2">
             <div>
               <label htmlFor="reminder-title" className={labelClass}>

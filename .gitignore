@@ -1,0 +1,31 @@
+# Dependencies
+node_modules
+.pnp
+.yarn/unplugged
+
+# Next.js
+.next
+out
+*.local
+
+# Environment
+.env*.local
+.env
+
+# Production
+*.production*
+*.build*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# DB
+*.sqlite
+supabase
+
+# Supabase
+**.env.sensitive

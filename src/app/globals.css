@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgb(59 130 246 / 0.5);
+  box-shadow: 0 0 0 4px rgb(59 130 246 / 0.12);
+}
+
+button {
+  transition: transform 140ms ease, opacity 140ms ease, box-shadow 140ms ease;
+}
+
+button:active {
+  transform: translateY(1px) scale(0.995);
+}
+
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid rgb(59 130 246 / 0.6);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: rgb(219 234 254);
+}
+
+input,
+select,
+textarea {
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
